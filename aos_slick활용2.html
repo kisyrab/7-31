@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS</title>
+    <link rel="stylesheet" href="css/aos.css">
+    
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script lang="java">
+        $(function(){
+            AOS.init({})
+            var off = $(".box").offset();
+            console.log(off)
+            
+            var off_left = $(".box").offset().left;
+            console.log(off_left)
+            
+            var off_top = $(".box").offset().top;
+            console.log(off_top)
+            
+            var pos = $(".box").position();
+            console.log("pos - ",pos)
+            
+            var pos_left = $(".box").position().left;
+            console.log("pos_left - ",pos_left)
+            
+            var pos_top = $(".box").position().top;
+            console.log("pos_top - ",pos_top)
+            
+        })//j
+    </script>
+
+    <style>
+        *{margin: 0; padding: 0;}
+        section{border: 2px solid #fff; background-color: #000; height: 800px;}
+
+        section > div{
+            width: 50%;
+            height: 300px;
+            background-color: dodgerblue;
+            margin-top: 300px;
+            font-size: 3rem;
+            text-align: center;
+            line-height: 300px;
+            color: white;
+            border-radius: 50px;
+        }
+
+        section:nth-child(odd) > div{
+            margin-left: auto;
+        }
+
+        #section02{
+            position: relative;
+        }
+        #section02 .box{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: dodgerblue;
+            width: 100px; height: 100px;
+            margin-top: 0;
+            font-size: 2rem;
+            line-height: 100px;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <section id="section01">
+        <div data-aos="fade-left">스크롤 애니메이션</div>
+    </section>
+    <section id="section02">
+        <div data-aos="fade-right">스크롤 애니메이션</div>
+        <div class="box">Box</div>
+    </section>
+    <section id="section03">
+        <div data-aos="fade-top" data-aos-anchor="#section03">스크롤 애니메이션</div>
+    </section>
+    <section id="section04">
+        <div data-aos="fade-bottom">스크롤 애니메이션</div>
+    </section>
+    <section id="section05">
+        <div data-aos="flip-left">스크롤 애니메이션</div>
+    </section>
+    <section id="section06">
+        <div data-aos="flip-top">스크롤 애니메이션</div>
+    </section>
+
+</body>
+</html>

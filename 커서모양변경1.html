@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커서바꾸기</title>
+
+
+    <style type="text/css">
+        a{text-decoration: none; color: inherit;}
+        .pointer {cursor: grab;}
+        .wait a{cursor: wait;}
+        .zoomin a{cursor: zoom-in;}
+        .link{width: 200px; height: 200px; border: 1px solid green;}
+        
+        html:hover{cursor: url("img/email_icon.png") 20 30 , url("img/icon01.png") 20 30 , auto;}
+        /* .link:hover{cursor: url("img/email_icon.png") 20 30 , url("img/icon01.png") 20 30 , auto;} */
+                    /* 나오고자 하는 이미지     x축 y축        안나오면 차선책이미지             필수로 쓰기 */
+
+        .link:active{cursor: url("img/bg_direction_nav.png") 20 30 , auto;}
+    </style>
+
+
+</head>
+<body>
+    <p class="pointer"><a href="#">손모양</a></p>
+    <p class="wait"><a href="#">로딩중</a></p>
+    <p class="zoomin"><a href="#">돋보기</a></p>
+    <p class="pointer">아무거나</p>
+
+    <div class="link">이미지커서</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS</title>
+    <link rel="stylesheet" href="css/aos.css">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script lang="java">
+        $(function(){
+            AOS.init({
+                duration:800,
+                easing:"ease-in-out",
+                delay:0,
+                offset:100
+            })
+        })//j
+
+    </script>
+
+    <style type="text/css">
+        *{margin: 0; padding: 0; }
+        body{
+            background-color: #000; 
+            color: #fff;
+        }
+        
+        .aos_wrap{
+            border: 1px solid snow;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .aos_wrap > div{
+            overflow-y: hidden;
+            width: 40%;
+            padding: 50px 0;
+            background-color: #fff;
+            color: #000;
+            margin: 100px 0;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+        .aos_wrap > div:nth-child(even){margin-left: auto;}
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="aos_wrap">
+        <div data-aos="fade-up" data-aos-duration="1000">fade up</div>
+        <div data-aos="fade-down" data-aos-easing="ease" data-aos-offset="0">fade down</div>
+        <div data-aos="fade-right">fade right</div>
+        <div data-aos="fade-left">fade left</div>
+        <div data-aos="fade-up">fade up</div>
+        
+        
+        <div data-aos="flip-up">flip up</div>
+        <div data-aos="flip-down">flip down</div>
+        <div data-aos="flip-right">flip right</div>
+        <div data-aos="flip-left">flip left</div>
+        <div data-aos="flip-up">flip up</div>
+        
+        
+        <div data-aos="slide-up">slide up</div>
+        <div data-aos="slide-down">slide down</div>
+        <div data-aos="slide-right">slide right</div>
+        <div data-aos="slide-left">slide left</div>
+        <div data-aos="slide-up">slide up</div>
+        
+        
+        <div data-aos="zoom-in">zoom-in</div>
+        <div data-aos="zoom-out">zoom-out</div>
+        <div data-aos="zoom-in-left">zoom-in-left</div>
+        <div data-aos="zoom-in-right">zoom-in-right</div>
+
+    </div>
+
+
+
+
+</body>
+</html>
